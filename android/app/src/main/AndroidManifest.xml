@@ -13,14 +13,14 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
             <!-- Deep Links　ここから -->
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />keytool -J-Duser.language=en -list -v -keystore android/keystore.jks
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https"
 
-                    android:host="universal-links-bucket-yutokobayashi.s3.us-west-2.amazonaws.com"
-                    android:pathPrefix=".well-known/assetlinks.json" />
+                    android:host="s3.us-west-2.amazonaws.com"
+                    android:pathPrefix="/index.yuto/index.html" />
                 <!-- ここにドメイン名追加する必要あるかも -->
             </intent-filter>
             <!-- Deep Links　ここまで追加 -->
